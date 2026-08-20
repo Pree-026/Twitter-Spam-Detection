@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Spam Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Twitter Spam Detection</h1>
+
+        <form id="spamForm">
+            <textarea id="tweetInput" placeholder="Enter your tweet here..." required></textarea>
+            <button type="submit">Detect Spam</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+      const form = document.getElementById("spamForm");
+      const resultDiv = document.getElementById("result");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Stop regular form submission
+
+        const tweet = document.getElementById("tweetInput").value.trim();
+
+        if (!tweet) {
+          resultDiv.textContent = "❌ Please enter a tweet.";
+          resultDiv.className = "result error";
+          return;
+        }
+
+        try {
+          const response = await fetch("/predict", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ tweet: tweet })
+          });
+
+          const data = await response.json();
+
+          if (data.prediction === "Spam") {
+            resultDiv.textContent = "⚠️ This tweet is SPAM.";
+            resultDiv.className = "result spam";
+          } else {
+            resultDiv.textContent = "✅ This tweet is NOT spam.";
+            resultDiv.className = "result ham";
+          }
+        } catch (error) {
+          resultDiv.textContent = "❌ Error analyzing the tweet.";
+          resultDiv.className = "result error";
+        }
+      });
+    </script>
+</body>
+</html>

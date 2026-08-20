@@ -1,0 +1,48 @@
+
+body {
+    background: #1DA1F2;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    background: #fff;
+    color: #000;
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 400px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #1DA1F2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.result.ham {
+    color: green;
+}
+
+.result.spam {
+    color: red;
+}
