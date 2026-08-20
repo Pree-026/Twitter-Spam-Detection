@@ -2,13 +2,13 @@
 
 A machine learning and NLP-based web application that detects whether a Twitter message is **Spam** or **Not Spam**.
 
-## 📌 Project Overview
+## Project Overview
 
 Spam messages on social media can contain unwanted advertisements, misleading information, malicious links, and other harmful content. This project uses **Natural Language Processing (NLP)** and **Machine Learning** techniques to automatically classify Twitter messages as spam or legitimate.
 
 The project includes data preprocessing, exploratory data analysis, text feature extraction, machine learning classification, and a web-based prediction application.
 
-## 🚀 Features
+## Features
 
 * Text preprocessing and cleaning
 * Natural Language Processing (NLP)
@@ -19,7 +19,7 @@ The project includes data preprocessing, exploratory data analysis, text feature
 * Web application for real-time prediction
 * User-friendly interface for entering a tweet and getting a prediction
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * Python
 * Pandas
@@ -33,7 +33,7 @@ The project includes data preprocessing, exploratory data analysis, text feature
 * CSS
 * Jupyter Notebook
 
-## 🤖 Machine Learning Models
+## Machine Learning Models
 
 The project explores multiple machine learning algorithms for spam classification:
 
@@ -43,7 +43,7 @@ The project explores multiple machine learning algorithms for spam classificatio
 
 Among the evaluated models, **Support Vector Machine (SVM)** achieved the best performance with an accuracy of approximately **98.6%**.
 
-## 🔄 Project Workflow
+## Project Workflow
 
 ```text
 Twitter Dataset
@@ -65,13 +65,13 @@ Spam / Not Spam Prediction
 Web Application
 ```
 
-## 📊 Dataset
+## Dataset
 
 The project uses a Twitter spam dataset containing text messages labelled as spam or non-spam.
 
 The dataset is preprocessed before model training by cleaning the text and converting it into numerical features using TF-IDF.
 
-## 📈 Model Evaluation
+## Model Evaluation
 
 The models were evaluated using metrics such as:
 
@@ -83,7 +83,7 @@ The models were evaluated using metrics such as:
 
 The best-performing model achieved approximately **98.6% accuracy** on the evaluated dataset.
 
-## 🌐 Web Application
+## Web Application
 
 The project includes a web application where users can enter a Twitter message and receive a prediction indicating whether the message is:
 
@@ -102,7 +102,7 @@ Prediction:
 Spam
 ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Twitter-Spam-Detection/
@@ -126,7 +126,7 @@ Twitter-Spam-Detection/
 └── README.md
 ```
 
-## ⚙️ Installation
+## Installation
 
 Clone the repository:
 
@@ -146,7 +146,7 @@ Install the required Python packages:
 pip install pandas numpy scikit-learn nltk matplotlib seaborn flask
 ```
 
-## ▶️ Run the Application
+## Run the Application
 
 Run the Flask application:
 
@@ -156,13 +156,13 @@ python app.py
 
 Then open the local URL displayed in the terminal in your web browser.
 
-## 🎯 Results
+## Results
 
 The project demonstrates that NLP-based machine learning models can effectively identify spam messages on social media.
 
 The **SVM classifier achieved approximately 98.6% accuracy**, making it the best-performing model among the evaluated approaches.
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * Deploy the application online
 * Use larger and more recent Twitter datasets
